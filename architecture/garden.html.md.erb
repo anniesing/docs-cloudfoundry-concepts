@@ -7,6 +7,28 @@ owner: Diego
 
 This topic describes Garden, the component that Cloud Foundry uses to create and manage isolated environments called containers. Each instance of an application deployed to Cloud Foundry runs within a container. For more information about how containers work, see the [Container Mechanics](../container-security.html#mechanics) section of the <em>Understanding Container Security</em> topic.
 
+===== DRAFT
+##<a class="overview"></a>Overview
+Garden as wrapper and API around OCI runtime to map API requests into OCI bundles and run commands using runC
+
+##<a class="components"></a>Components
+	Architecture - some or all of the picture from the opsguide(https://github.com/cloudfoundry/garden-runc-release/blob/develop/docs/opsguide.md)
+	API
+	Backends
+		Linux 
+			RunC
+				Garden RunC image - 
+				RunDMC - manages depot and RuncRunner
+				Garden-Shed - root fs manager
+				Kawasaki
+				Dadoo
+			OCI
+			OCI bundle
+		Windows Greenhouse
+
+
+======DRAFT 
+
 ##<a id='backends'></a>Backends
 
 Garden has pluggable backends for different platforms and runtimes, and specifies a set of interfaces that each platform-specific backend must implement. These interfaces contain methods to perform the following actions:
